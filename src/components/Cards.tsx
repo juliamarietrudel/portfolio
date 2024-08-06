@@ -2,47 +2,49 @@ import { useState } from "react";
 import Card from "./Card";
 import "./Cards.css";
 
-export default function Cards() {
-  const [count, setCount] = useState(new Array(4).fill(false));
+const images = [
+  "images/project-cambio.png",
+  "images/project-bouldering.png",
+  "images/project-mariane.png",
+  "images/project-golf.png",
+  "images/project-cambio.png",
+  "images/project-mariane.png",
+  "images/project-cambio.png",
+  "images/project-bouldering.png",
+  "images/project-mariane.png",
+  "images/project-golf.png",
+  "images/project-cambio.png",
+  "images/project-mariane.png",
+];
 
-  function handleIncrement(index: number) {
-    const newCount = count.slice();
-    if (newCount[index]) {
-      newCount[index] = false;
-    } else {
-      newCount[index] = true;
-    }
-    setCount(newCount);
-    console.log(count);
-  }
+export default function Cards() {
+  const [activeState, setActiveState] = useState(new Array(3).fill(false));
+
+  // function handleHover(index: number) {
+  //   console.log("activeState:", activeState);
+  //   const newActiveState = activeState.slice();
+  //   console.log("NewActiveState:", newActiveState);
+  //   if (newActiveState[index]) {
+  //     newActiveState[index] = false;
+  //   } else {
+  //     newActiveState[index] = true;
+  //   }
+  //   setActiveState(newActiveState);
+  // }
 
   return (
     <div className="cards">
-      <Card
-        value="0"
-        onIncrement={() => handleIncrement(0)}
-        active={count[0]}
-      />
-      <Card
-        value="1"
-        onIncrement={() => handleIncrement(1)}
-        active={count[1]}
-      />
-      <Card
-        value="2"
-        onIncrement={() => handleIncrement(2)}
-        active={count[2]}
-      />
-      <Card
-        value="3"
-        onIncrement={() => handleIncrement(3)}
-        active={count[3]}
-      />
-      <Card
-        value="4"
-        onIncrement={() => handleIncrement(4)}
-        active={count[4]}
-      />
+      {images.map((image, index) => {
+        return (
+          <Card
+            // onHover={() => handleHover(index)}
+            active={activeState[index]}
+            // change key
+            key={index}
+            style={{ backgroundImage: `url(${image})` }}
+          />
+        );
+      })}
     </div>
   );
 }

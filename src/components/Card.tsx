@@ -1,20 +1,20 @@
+import { CSSProperties } from "react";
 import "./Card.css";
 
 interface Props {
-  onIncrement: () => void;
   active: boolean;
-  value: string;
+  // onHover: () => void;
+  style: CSSProperties;
 }
-export default function Card({ onIncrement, active, value }: Props) {
+
+export default function Card({ active, style }: Props) {
   return (
     <>
-      <div
-        // className={active ? "card card-active" : "card"}
-        className="card card-bg-img"
-        onClick={onIncrement}
-      >
-        <p>Value: {value}</p>
-        <p>Active: {active ? "true" : "false"}</p>
+      <div className="card-container">
+        <div className={active ? "card card-active" : "card"} style={style}>
+          {/* <p>Value: {value}</p>
+        <p>Active: {active ? "true" : "false"}</p> */}
+        </div>
       </div>
     </>
   );
