@@ -2,48 +2,32 @@ import { useState } from "react";
 import Card from "./Card";
 import "./Cards.css";
 
-const images = [
-  "images/project-cambio.png",
-  "images/project-bouldering.png",
-  "images/project-mariane.png",
-  "images/project-golf.png",
-  "images/project-cambio.png",
-  "images/project-mariane.png",
-  "images/project-cambio.png",
-  "images/project-bouldering.png",
-  "images/project-mariane.png",
-  "images/project-golf.png",
-  "images/project-cambio.png",
-  "images/project-mariane.png",
+const projects = [
+  { image: "images/project-cambio.png", language: "React" },
+  { image: "images/project-bouldering.png", language: "Ruby on Rails" },
+  { image: "images/project-mariane.png", language: "Ruby on Rails" },
+  { image: "images/project-golf.png", language: "Ruby on Rals" },
+  { image: "images/project-cambio.png", language: "React" },
+  { image: "images/project-cambio.png", language: "React" },
+  { image: "images/project-bouldering.png", language: "Ruby on Rails" },
+  { image: "images/project-mariane.png", language: "Ruby on Rails" },
+  { image: "images/project-golf.png", language: "Ruby on Rals" },
+  { image: "images/project-cambio.png", language: "React" },
 ];
 
-export default function Cards() {
-  const [activeState, setActiveState] = useState(new Array(3).fill(false));
+export default function Cards({ selectedLanguage }) {
+  function filterProject() {
+    projects.filter((project) => {
+      project.language == selectedLanguage;
+    });
+  }
 
-  // function handleHover(index: number) {
-  //   console.log("activeState:", activeState);
-  //   const newActiveState = activeState.slice();
-  //   console.log("NewActiveState:", newActiveState);
-  //   if (newActiveState[index]) {
-  //     newActiveState[index] = false;
-  //   } else {
-  //     newActiveState[index] = true;
-  //   }
-  //   setActiveState(newActiveState);
-  // }
+  const filteredProjects = selectedLanguage ? filterProject : projects;
 
   return (
     <div className="cards">
-      {images.map((image, index) => {
-        return (
-          <Card
-            // onHover={() => handleHover(index)}
-            active={activeState[index]}
-            // change key
-            key={index}
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        );
+      {projects.map((project) => {
+        <Card style={{ backgroundImage = project.image }} />;
       })}
     </div>
   );

@@ -1,4 +1,9 @@
 /* comment 1 */
+
+.container-menu {
+  width: 100%;
+}
+
 .app-container {
   filter: grayscale();
   width: 100%;

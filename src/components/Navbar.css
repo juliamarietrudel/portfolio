@@ -1,8 +1,9 @@
 .navbar {
-  background-color: #eeeeee;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .navbar-container a, p {
@@ -21,8 +22,6 @@
   }
 
   h1 {
-    background-color: black;
-    color: white;
     width: fit-content;
     padding: 0.4rem;
   }

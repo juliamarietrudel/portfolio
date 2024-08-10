@@ -1,0 +1,14 @@
+.container-content {
+  background-color: #000000;
+  color: white;
+}
+
+.inline-list {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 0 5rem 0;
+}
