@@ -1,3 +1,7 @@
+.app-container {
+  filter: grayscale();
+  width: 100%;
+}
 @media (max-width: 991px) {
   .app-container {
     display: grid;

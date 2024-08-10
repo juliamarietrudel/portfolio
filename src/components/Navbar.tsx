@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar-container">
         <h1>
-          Julia-Marie
+          JuliaMarie
           <br />
           Trudel
         </h1>
