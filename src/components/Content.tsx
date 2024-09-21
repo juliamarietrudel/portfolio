@@ -20,7 +20,11 @@ export default function Content() {
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={handleSelectedLanguage}
       />
-      <Cards selectedLanguage={selectedLanguage} />
+      {selectedLanguage ? (
+        <Cards selectedLanguage={selectedLanguage} />
+      ) : (
+        <p className="select-language-message">Select a language</p>
+      )}
     </div>
   );
 }
