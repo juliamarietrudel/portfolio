@@ -6,14 +6,7 @@ interface Props {
 }
 
 export default function Menu({ selectedLanguage, setSelectedLanguage }: Props) {
-  const languages = [
-    "React",
-    "Ruby on Rails",
-    "Vanilla JS",
-    "CSS",
-    "HTML",
-    "SQL",
-  ];
+  const languages = ["React", "Ruby on Rails", "Vanilla JS", "CSS"];
 
   return (
     <>
