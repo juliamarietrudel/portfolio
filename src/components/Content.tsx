@@ -7,7 +7,11 @@ export default function Content() {
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
   function handleSelectedLanguage(language: string) {
-    setSelectedLanguage(language);
+    if (language === selectedLanguage) {
+      setSelectedLanguage("");
+    } else {
+      setSelectedLanguage(language);
+    }
   }
 
   return (
