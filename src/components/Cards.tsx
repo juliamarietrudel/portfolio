@@ -1,13 +1,12 @@
-import { useState } from "react";
 import Card from "./Card";
 import "./Cards.css";
 
 const projects = [
   {
     image: "images/project-cambio.png",
-    languages: ["HTML", "CSS"],
+    languages: ["CSS"],
     key: "1",
-    url: "",
+    url: "https://github.com/juliamarietrudel/cambio",
   },
   {
     image: "images/project-bouldering.png",
@@ -23,7 +22,7 @@ const projects = [
   },
   {
     image: "images/project-calculator.png",
-    languages: ["Vanilla JS", "HTML", "CSS"],
+    languages: ["Vanilla JS", "CSS"],
     key: "4",
     url: "",
   },
@@ -31,7 +30,13 @@ const projects = [
     image: "images/project-golf.png",
     languages: ["Ruby on Rails", "SQL"],
     key: "5",
-    url: "",
+    url: "http://golf-booking-app-988410ec4e3c.herokuapp.com",
+  },
+  {
+    image: "images/project-nearme.png",
+    languages: ["Ruby on Rails", "React", "SQL"],
+    key: "6",
+    url: "https://github.com/juliamarietrudel/near_me",
   },
 ];
 
